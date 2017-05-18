@@ -1,0 +1,39 @@
+// BASE
+// ------------------------------
+// Document base font size in px: better not change it
+$font-size-base: 16px;
+
+// General unit accross the website
+$unit: .5rem; // 8px grid
+
+// Base line-height
+$line-height-base: $unit*3; // 24px
+
+
+
+// COLORS
+// ------------------------------
+$primary: #49A4FF;
+$secondary: #E34234;
+$accent: #FFFF65;
+
+$black: #0E0E0C;
+$darkest: #1C1C19;
+$darker: #30302B;
+$dark: #43433D;
+$light: #65655F;
+$lighter: #9A9A90;
+$lightest: #C4C4BB;
+$white: #F6F6F0;
+
+
+
+// BREAKPOINTS
+// ------------------------------
+$breakpoints: (
+    xs: 0,
+    sm: 320px,
+    md: 375px,
+    lg: 425px,
+    xl: 768px
+);

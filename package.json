@@ -1,0 +1,26 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "algoliasearch": "^3.22.2",
+    "algoliasearch-helper": "^2.20.1",
+    "autocomplete.js": "^0.28.1",
+    "inferno": "^3.1.2",
+    "inferno-component": "^3.1.2"
+  },
+  "devDependencies": {
+    "inferno-scripts": "3.0.0",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2"
+  },
+  "scripts": {
+    "build-css": "node-sass src/scss/ -o public/",
+    "watch-css": "npm run build-css && node-sass src/scss/ -o public/ --watch --recursive",
+    "start-js": "inferno-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && inferno-scripts build",
+    "test": "inferno-scripts test --env=jsdom",
+    "eject": "inferno-scripts eject"
+  }
+}

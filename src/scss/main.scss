@@ -1,0 +1,30 @@
+// Load components
+// NOTE don't write CSS in there
+// --------------------
+
+
+// Import project commons
+// --------------------
+@import "variables";
+@import "reset";
+@import "partials/breakpoints";
+@import "partials/grid";
+@import "helpers";
+@import "global";
+@import "common";
+// @import "icons"; (example)
+// …
+
+
+// Import project sections
+// NOTE create one file per section, put other things into “misc”
+// --------------------
+@import "misc";
+// @import "partials/gamenav";
+// …
+
+
+// Import temporary styles
+// NOTE Keep it as clean as possible (empty is best)
+// --------------------
+@import "dev";

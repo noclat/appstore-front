@@ -1,0 +1,22 @@
+// General
+// NOTE styles on tag selectors
+// ---------------------
+body {
+  @extend %antialiased;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+
+// Overrides
+// ---------------------
+.material-icons {
+  position: relative;
+  top: .14em;
+  font-size: 1em;
+}
+
+
+
+// Utilities
+// NOTE use `u-` prefix for public classes
+// ---------------------

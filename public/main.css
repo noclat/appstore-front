@@ -1,0 +1,94 @@
+/**
+ * Reset
+ * NOTE it's better to define line-height in proportion to `$unit` to preserve the baseline
+ * ------------------------------
+ * Dependencies:
+ * - $font-size-base
+ * - $unit
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%; }
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-size: 16px; }
+
+body {
+  line-height: 1.5rem; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0.5rem; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/**
+ * Breakpoints
+ * ------------------------------
+ * Dependencies:
+ * - $breakpoints
+ * - $font-size-base
+ */
+/**
+ * Grid
+ * ------------------------------
+ * Dependencies:
+ * - Breakpoints
+ * - $breakpoints
+ * - $unit
+ */
+body {
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+.material-icons {
+  position: relative;
+  top: .14em;
+  font-size: 1em; }
+
+.algolia-autocomplete {
+  border: 1px solid #eee;
+  width: 100%; }
+
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: 100%;
+  min-height: 30px;
+  text-indent: 10px; }
+
+.algolia-autocomplete .aa-hint {
+  color: #999; }
+
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-top: none; }
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px; }
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #B2D7FF; }
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal; }
