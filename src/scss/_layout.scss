@@ -1,0 +1,68 @@
+// Common components
+// NOTE components shared across multiple sections (ex: header, footer, nav…)
+// --------------------
+$nav-width: $unit*35; // 280px
+
+.Wrap {
+	@include breakpoint-up(lg) {
+		padding-left: $nav-width;
+	}
+}
+
+.Overlay {
+	z-index: -1;
+	opacity: 0;
+	position: fixed;
+	top: 0; bottom: 0; left: 0; right: 0;
+	background: rgba($darkest, .8);
+	-webkit-transition: all .15s;
+	transition: all .15s;
+
+	.Wrap.nav-open & {
+		z-index: 999;
+		opacity: 1;
+	}
+
+	@include breakpoint-up(lg) {
+		display: none !important;
+	}
+}
+
+.Nav {
+	z-index: 1000;
+	position: fixed;
+	top: 0; bottom: 0; left: 0;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	max-width: 80%;
+	width: $nav-width;
+	background: $white;
+
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	-webkit-transition: all .15s;
+	transition: all .15s;
+
+	.Wrap.nav-open & {
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	@include breakpoint-up(lg) {
+		border-right: 1px solid $lighter;
+		background: $lightest;
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+.Main {
+	position: relative;
+	max-width: 1280px;
+	margin: auto;
+	padding: $unit*10 $unit $unit*4;
+
+	@include breakpoint-up(lg) {
+		 padding: $unit*14 $unit*3 $unit*6;
+	}
+}

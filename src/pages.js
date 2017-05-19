@@ -27,11 +27,18 @@ class Pages extends Component {
   render() {
     var current = this.props.query.getPage() + 1;
     return (
-      <div>
-        <button type="button" onClick={ this.prev }>Previous</button>
-        <input type="text" onChange={ this.set } value={ current } /> / { this.props.max }
-        <button type="button" onClick={ this.next }>Next</button>
-      </div>
+      <nav className="Pages">
+        <button className="Pages-btn" type="button" onClick={ this.prev } disabled={ current === 1 }>
+          <i className="material-icons">navigate_before</i>
+        </button>
+        <div className="Pages-number">
+          <input className="Pages-number-input" type="text" onChange={ this.set } value={ current } disabled={ this.props.max === 1 } />
+          <span className="Pages-number-total">/ { this.props.max }</span>
+        </div>
+        <button className="Pages-btn" type="button" onClick={ this.next } disabled={ current === this.props.max }>
+          <i className="material-icons">navigate_next</i>
+        </button>
+      </nav>
     );
   }
 }

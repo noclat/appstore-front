@@ -1,0 +1,45 @@
+.Pages {
+	text-align: center;
+
+	&-btn {
+		@extend %btn;
+		vertical-align: top;
+		font-size: $font-size-base * 1.25;
+
+		&:disabled {
+			opacity: .2;
+		}
+	}
+
+	&-number {
+		display: inline-block;
+		vertical-align: top;
+		line-height: $unit*4;
+		margin: 0 $unit*2;
+		border-radius: 2px;
+		border: 1px solid $lighter;
+		background: $lightest;
+		font-size: 0;
+
+		&-input {
+			display: inline-block;
+			vertical-align: middle;
+			width: 3em;
+			padding: 0;
+			border: 0; outline: none;
+			text-align: center;
+			line-height: calc(#{$unit*4} - 2px);
+			font-family: $font-default;
+			font-size: $font-size-base;
+		}
+
+		&-total {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 $unit;
+			font-weight: bold;
+			font-size: $font-size-base * .75;
+			color: $dark;
+		}
+	}
+}

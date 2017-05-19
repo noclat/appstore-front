@@ -2,6 +2,7 @@
 // ------------------------------
 // Document base font size in px: better not change it
 $font-size-base: 16px;
+$font-default: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
 // General unit accross the website
 $unit: .5rem; // 8px grid
@@ -13,18 +14,17 @@ $line-height-base: $unit*3; // 24px
 
 // COLORS
 // ------------------------------
-$primary: #49A4FF;
-$secondary: #E34234;
-$accent: #FFFF65;
+$primary: #5764c6;
+$secondary: #eff1fa;
 
-$black: #0E0E0C;
-$darkest: #1C1C19;
-$darker: #30302B;
-$dark: #43433D;
-$light: #65655F;
-$lighter: #9A9A90;
-$lightest: #C4C4BB;
-$white: #F6F6F0;
+$black: #000;
+$darkest: #454d5d;
+$darker: #727e96;
+$dark: #acb3c2;
+$light: #e7e9ed;
+$lighter: #f0f1f4;
+$lightest: #f8f9fa;
+$white: #FFF;
 
 
 
@@ -32,8 +32,8 @@ $white: #F6F6F0;
 // ------------------------------
 $breakpoints: (
     xs: 0,
-    sm: 320px,
-    md: 375px,
-    lg: 425px,
-    xl: 768px
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1440px
 );

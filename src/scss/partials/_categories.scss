@@ -1,0 +1,39 @@
+.Categories {
+	padding: $unit*2;
+
+	&-title {
+		margin-bottom: $unit*2;
+		border-bottom: 2px solid $light;
+		color: $dark;
+	}
+
+	&-list {
+
+		&-item {
+			color: $darker;
+			cursor: pointer;
+
+			&.is-active {
+				font-weight: bold;
+			}
+
+			&-name {
+				display: inline-block;
+				margin: 0 $unit;
+			}
+
+			.material-icons {
+				color: $dark;
+			}
+
+			&:hover &-name, &:focus &-name {
+				text-decoration: underline;
+				color: $darkest;
+			}
+
+			&-count {
+				@extend %chip;
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.Apps {
+	@include grid($unit*2);
+
+	&-wrap {
+		@include row((sm:2,xl:4));
+	}
+
+	&-item {
+		margin-bottom: $unit*2;
+
+		&-wrap {
+			position: relative;
+			padding: $unit*2;
+			border: 1px solid $lighter;
+			box-shadow: 0 0 15px rgba($darkest, .05);
+			background: $white;
+		}
+
+		&-icon {
+			display: block;
+			float: left;
+			width: $unit*8;
+			height: $unit*8;
+			margin-bottom: $unit*2;
+		}
+
+		&-download {
+			@extend %btn;
+			position: absolute;
+			top: $unit*2; right: $unit*2;
+		}
+
+		&-text {
+			clear: both;
+		}
+
+		&-title {}
+		&-info {
+			font-size: .75em;
+			color: $dark;
+
+			&-rank {
+				@extend %chip;
+				margin-left: $unit;
+			}
+		}
+	}
+}

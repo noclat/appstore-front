@@ -1,3 +1,40 @@
 // Misc styles
 // NOTE single-selector sections/partials go here
 // --------------------
+.Header {
+	padding: $unit*4 $unit*2 0;
+	text-align: center;
+
+	@include breakpoint-up(lg) {
+		padding: $unit*6 $unit*2 $unit*4;
+	}
+
+	&-logo {
+		display: inline-block;
+		width: 32px; height: auto;
+		margin-bottom: $unit;
+
+		@include breakpoint-up(lg) {
+			width: 64px;
+		}
+	}
+}
+
+.Results {
+	margin-bottom: $unit*4;
+}
+
+.Credits {
+	text-align: center;
+	font-size: $font-size-base*.625;
+	color: $dark;
+
+	a {
+		text-decoration: none;
+		color: $primary;
+
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+}

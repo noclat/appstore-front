@@ -1,0 +1,77 @@
+.Search {
+	z-index: 100;
+	position: fixed;
+	top: $unit*2; left: $unit*2; right: $unit*2;
+	border: 1px solid $lighter;
+	background: $white;
+	box-shadow: 5px 0 15px rgba($darkest, .05);
+
+	@include breakpoint-up(lg) {
+		position: absolute;
+		top: $unit*4; left: $unit*4; right: $unit*4;
+	}
+
+	&-nav {
+		display: block;
+		float: left;
+		width: $line-height-base*1.5;
+		border: 0; outline: none;
+		background: $white;
+		text-align: center;
+		line-height: $line-height-base*1.5;
+		font-size: $font-size-base * 1.25;
+
+		@include breakpoint-up(lg) {
+			display: none;
+		}
+	}
+
+	&-sort {
+		@extend %antialiased;
+		display: block;
+		float: right;
+		width: $unit*10;
+		border: 0; outline: none;
+		background: $darker;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: $line-height-base*1.5;
+		font-weight: bold;
+		color: $white;
+		cursor: pointer;
+
+		-webkit-transition: background .15s;
+		transition: background .15s;
+
+		&:hover, &:focus {
+			background: $darkest;
+		}
+	}
+
+	&-field {
+		display: block;
+		margin-left: $line-height-base*1.5;
+		margin-right: $unit*10;
+
+		@include breakpoint-up(lg) {
+			margin-left: 0;
+		}
+	}
+
+	&-input {
+		width: 100%;
+		height: $line-height-base*1.5;
+		padding: $line-height-base/4 $line-height-base/2;
+		border: 0; outline: none;
+		line-height: $line-height-base;
+		font-family: $font-default;
+		font-size: $font-size-base;
+		outline: none;
+		color: $darkest;
+
+		&::-webkit-input-placeholder { color: $dark; }
+		&::-moz-placeholder { color: $dark; }
+		&:-ms-input-placeholder { color: $dark; }
+		&:-moz-placeholder { color: $dark; }
+	}
+}

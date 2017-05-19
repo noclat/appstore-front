@@ -9,6 +9,41 @@
 %defaultaliasing { -webkit-font-smoothing: none; }
 %unselectable { -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none; }
 
+%btn {
+	display: inline-block;
+	padding: 0 $unit*2;
+	border-radius: 2px;
+	border: 0; outline: none;
+	background: $primary;
+	box-shadow: 0 1px 0 darken($primary, 5%), 0 3px 5px rgba($darkest, .2);
+	line-height: $unit*4;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: $font-size-base * .75;
+	color: $white;
+	cursor: pointer;
+
+	-webkit-transition: all .8s;
+	transition: all .8s;
+
+	&:focus, &:hover {
+		background: $darkest;
+		box-shadow: 0 1px 0 darken($darkest, 5%), 0 3px 5px rgba($darkest, .2);
+	}
+}
+
+%chip {
+	display: inline-block;
+	padding: 0 $unit/2;
+	border-radius: 2px;
+	background: $darker;
+	line-height: $unit*2;
+	font-weight: bold;
+	font-size: $font-size-base*.625;
+	color: $lightest;
+}
+
 
 // Functions
 // ---------------------

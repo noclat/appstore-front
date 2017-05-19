@@ -11,7 +11,7 @@
 @import "partials/grid";
 @import "helpers";
 @import "global";
-@import "common";
+@import "layout";
 // @import "icons"; (example)
 // …
 
@@ -20,7 +20,10 @@
 // NOTE create one file per section, put other things into “misc”
 // --------------------
 @import "misc";
-// @import "partials/gamenav";
+@import "partials/categories";
+@import "partials/search";
+@import "partials/apps";
+@import "partials/pages";
 // …
 
 
