@@ -24,8 +24,8 @@
 	color: $white;
 	cursor: pointer;
 
-	-webkit-transition: all .8s;
-	transition: all .8s;
+	-webkit-transition: all .15s;
+	transition: all .15s;
 
 	&:focus, &:hover {
 		background: $darkest;
@@ -35,6 +35,7 @@
 
 %chip {
 	display: inline-block;
+	vertical-align: middle;
 	padding: 0 $unit/2;
 	border-radius: 2px;
 	background: $darker;

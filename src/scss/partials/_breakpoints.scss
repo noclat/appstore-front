@@ -4,6 +4,21 @@
  * Dependencies:
  * - $breakpoints
  * - $font-size-base
+ *
+ * How to use:
+
+// @media (min-width: 420px) { … }
+@include breakpoint-up(sm) { … }
+
+// @media (max-width: 1439px) { … }
+@include breakpoint-down(lg) { … }
+
+// @media (min-width: 420px) and (max-width: 1439px) { … }
+@include breakpoint-between(sm, lg) { … }
+
+// @media (min-width: 768px) and (max-width: 1023px) { … }
+@include breakpoint-only(md) { … }
+
  */
 
 

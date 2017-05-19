@@ -29,10 +29,12 @@ class App extends Component {
   constructor(props) {
     super(props);
 		this.state = {
+      title: '',
       orderBy: 'rank:desc',
       query: query,
       nbPages: 1,
 			hits: [],
+      nbHits: 0,
 			categories: [],
       nav: false,
 		};
@@ -42,11 +44,21 @@ class App extends Component {
 
     // handle search result
     query.on('result', (function(res) {
+      console.log(res);
+      var categories = res.getFacetValues('category');
+      var title = 'All apps';
+
+      if (categories.length === 1) {
+        title = categories[0].name;
+      }
+
       this.setState({
+        title: title,
         hits: res.hits,
-        categories: res.getFacetValues('category'),
+        nbHits: res.nbHits,
+        categories: categories,
         nbPages: res.nbPages,
-        nav: this.state.nav && res.getFacetValues('category').length > 1, // close nav if a category is selected
+        nav: this.state.nav && categories.length > 1, // close nav if a category is selected
       });
     }).bind(this));
 	}
@@ -88,6 +100,7 @@ class App extends Component {
             toggleSort={ this.toggleSort }
             orderBy={ this.state.orderBy } />
           <section className="Results">
+            <h2 className="Results-title">{ this.state.title }: { this.state.nbHits }</h2>
             <Apps items={ this.state.hits } />
             <Pages query={ this.state.query } max={ this.state.nbPages } />
           </section>

@@ -9,7 +9,9 @@ class Apps extends Component {
             this.props.items.map(item =>
               <article className="Apps-item">
                 <div className="Apps-item-wrap">
-                  <img className="Apps-item-icon" src={ item.image } alt={ item.name } />
+                  <figure className="Apps-item-icon">
+                    <img className="Apps-item-icon-img" src={ item.image } alt={ item.name } />
+                  </figure>
                   <a className="Apps-item-download" href={ item.link } target="_blank">
                     Install <i className="material-icons">get_app</i>
                   </a>

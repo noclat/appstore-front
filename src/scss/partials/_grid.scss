@@ -5,6 +5,26 @@
  * - Breakpoints
  * - $breakpoints
  * - $unit
+ *
+ * How to use:
+
+.grid {
+    @include grid($unit); // argument is gutter width
+
+    &-row {
+        @include row((sm: 2, md: 3, lg: 4));
+    }
+
+    &-cell {
+        // default is 1 column wide
+
+        &:last-child { // modifiers
+            @include column((sm: 2, md: 1, lg: 2));
+            @include offset((md: 1, xl: 0));
+        }
+    }
+}
+
  */
 
 

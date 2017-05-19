@@ -10,6 +10,7 @@
 	&-list {
 
 		&-item {
+			@extend %unselectable;
 			color: $darker;
 			cursor: pointer;
 

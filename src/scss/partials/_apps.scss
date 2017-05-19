@@ -17,11 +17,18 @@
 		}
 
 		&-icon {
+			overflow: hidden;
 			display: block;
 			float: left;
 			width: $unit*8;
 			height: $unit*8;
 			margin-bottom: $unit*2;
+			border-radius: 10px;
+
+			&-img {
+				display: block;
+				width: 100%; height: auto;
+			}
 		}
 
 		&-download {
@@ -44,9 +51,13 @@
 			font-size: .75em;
 			color: $dark;
 
+			.material-icons {
+				margin-right: $unit/2;
+			}
+
 			&-rank {
 				@extend %chip;
-				margin-left: $unit;
+				margin-left: $unit*1.5;
 			}
 		}
 	}

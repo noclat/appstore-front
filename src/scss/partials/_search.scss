@@ -20,6 +20,7 @@
 		text-align: center;
 		line-height: $line-height-base*1.5;
 		font-size: $font-size-base * 1.25;
+		color: $darker;
 
 		@include breakpoint-up(lg) {
 			display: none;
