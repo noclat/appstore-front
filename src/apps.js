@@ -14,9 +14,10 @@ class Apps extends Component {
                     Install <i className="material-icons">get_app</i>
                   </a>
                   <div className="Apps-item-text">
-                    <h2 className="Apps-item-title">{ item.name.replace('&amp;', '&') }</h2>
+                    <h2 className="Apps-item-title" dangerouslySetInnerHTML={{__html: item._highlightResult.name.value }}></h2>
                     <span className="Apps-item-info">
-                      <i className="material-icons">label</i> { item.category.replace('&amp;', '&') }
+                      <i className="material-icons">label</i>
+                      <span dangerouslySetInnerHTML={{__html: item.category }}></span>
                       <span className="Apps-item-info-rank">#{ item.rank }</span>
                     </span>
                   </div>

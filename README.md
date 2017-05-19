@@ -1,3 +1,7 @@
+# Algolia Appstore front-end
+
+[View demo](https://appstore.ntorres.com)
+
 ## Install
 
 ```
@@ -9,7 +13,7 @@ npm start
 
 ## Resources
 
-- [Create Inferno App](https://github.com/infernojs/create-inferno-app).
+- [Create Inferno App](https://github.com/infernojs/create-inferno-app)
 - [Google Web Starter Kit](https://github.com/google/web-starter-kit/tree/master/app)
 - [Google Material icons](https://material.io/icons/)
 - [Spectre CSS](https://picturepan2.github.io/spectre/) color scheme
