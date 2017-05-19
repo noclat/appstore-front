@@ -321,6 +321,8 @@ body {
       right: 1rem; }
     .Apps-item-text {
       clear: both; }
+    .Apps-item-title b, .Apps-item-title em {
+      color: #5764c6; }
     .Apps-item-info {
       font-size: .75em;
       color: #acb3c2; }

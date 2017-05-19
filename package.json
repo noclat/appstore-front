@@ -1,11 +1,10 @@
 {
-  "name": "my-app",
+  "name": "appstore",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "algoliasearch": "^3.22.2",
     "algoliasearch-helper": "^2.20.1",
-    "autocomplete.js": "^0.28.1",
     "inferno": "^3.1.2",
     "inferno-component": "^3.1.2"
   },

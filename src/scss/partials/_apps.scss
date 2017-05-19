@@ -34,7 +34,12 @@
 			clear: both;
 		}
 
-		&-title {}
+		&-title {
+			b, em {
+				color: $primary;
+			}
+		}
+
 		&-info {
 			font-size: .75em;
 			color: $dark;

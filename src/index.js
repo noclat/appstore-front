@@ -40,6 +40,7 @@ class App extends Component {
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleSort = this.toggleSort.bind(this);
 
+    // handle search result
     query.on('result', (function(res) {
       this.setState({
         hits: res.hits,
@@ -51,7 +52,7 @@ class App extends Component {
 	}
 
   componentDidMount() {
-		query.search();
+		query.search(); // display all results
   }
 
   toggleNav() {
