@@ -2,7 +2,7 @@
 
 [View demo](https://appstore.ntorres.com)
 
-## Install
+## Run locally
 
 ```
 git clone git@github.com:noclat/appstore-front.git

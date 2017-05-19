@@ -6,7 +6,8 @@
 # testing
 /coverage
 
-# production
+# build
+public/main.css*
 /build
 
 # misc
