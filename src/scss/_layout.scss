@@ -58,11 +58,14 @@ $nav-width: $unit*35; // 280px
 
 .Main {
 	position: relative;
-	max-width: 1280px;
+	max-width: 1024px;
 	margin: auto;
 	padding: $unit*10 $unit $unit*4;
 
 	@include breakpoint-up(lg) {
 		 padding: $unit*14 $unit*3 $unit*6;
+	}
+	@include breakpoint-up(xl) {
+		 max-width: 1280px;
 	}
 }
