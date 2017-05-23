@@ -2,9 +2,6 @@
 import { render } from 'inferno';
 import Component from 'inferno-component';
 
-// Load helpers
-// import { extend } from './helpers';
-
 // Load components
 import Search from './search';
 import Apps from './apps';
@@ -28,23 +25,23 @@ var query = algoliasearchHelper(client, indexes['rank:desc'], {
 class App extends Component {
   constructor(props) {
     super(props);
-		this.state = {
+    this.state = {
       title: '',
       orderBy: 'rank:desc',
       query: query,
       nbPages: 1,
-			hits: [],
+      hits: [],
       nbHits: 0,
-			categories: [],
+      categories: [],
       nav: false,
-		};
+    };
 
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleSort = this.toggleSort.bind(this);
 
     // handle search result
     query.on('result', (function(res) {
-      console.log(res);
+      // console.log(res);
       var categories = res.getFacetValues('category');
       var title = 'All apps';
 
@@ -61,10 +58,10 @@ class App extends Component {
         nav: this.state.nav && categories.length > 1, // close nav if a category is selected
       });
     }).bind(this));
-	}
+  }
 
   componentDidMount() {
-		query.search(); // display all results
+    query.search(); // display all results
   }
 
   toggleNav() {
