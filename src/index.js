@@ -16,8 +16,8 @@ var indexes = {
   'rank:desc': 'apps_desc',
   'rank:asc': 'apps_asc',
 };
-var query = algoliasearchHelper(client, indexes['rank:desc'], {
-  facets: ['category'],
+var query = algoliasearchHelper(client, indexes['rank:asc'], {
+  disjunctiveFacets: ['category'],
 });
 
 
@@ -27,7 +27,7 @@ class App extends Component {
     super(props);
     this.state = {
       title: '',
-      orderBy: 'rank:desc',
+      orderBy: 'rank:asc',
       query: query,
       nbPages: 1,
       hits: [],

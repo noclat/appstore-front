@@ -24,4 +24,4 @@ npm start
 - [Google Material icons](https://material.io/icons/)
 - [Web App Manifest Generator](https://app-manifest.firebaseapp.com/)
 - [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/)
-- Personal SCSS starter and grid
+- [Personal SCSS starter and grid](https://github.com/noclat/scss-starter)
